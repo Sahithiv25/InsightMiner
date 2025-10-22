@@ -3,3 +3,4 @@ fastapi
 sqlalchemy
 streamlit
 plotly
+pyyaml
