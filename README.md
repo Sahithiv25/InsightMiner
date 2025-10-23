@@ -26,6 +26,11 @@ It combines:
 | Visualization | Altair / Plotly |
 | Orchestration | uvicorn + async FastAPI |
 
+## 🎯 Output Screenshots
+![Model Inputs](Images/controls.jpg)
+![Model Outputs](Images/output_insights.jpg) 
+
+
 ## 🖥️ Installation & Setup
 
 ### 🔧 Prerequisites
