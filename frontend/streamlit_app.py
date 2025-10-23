@@ -59,7 +59,7 @@ with c2:
 @st.cache_data(show_spinner=False)
 def call_api(question: str, start: str, end: str, dims: list):
     resp = requests.post(
-        f"{API_URL}/ask/",
+        f"{API_URL}/ask-llm/",
         headers={"Content-Type": "application/json"},
         json={"question": question, "start": start, "end": end, "dims": dims},
         timeout=25,
