@@ -40,34 +40,27 @@ It combines:
 git clone https://github.com/Sahithiv25/InsightMiner.git
 cd InsightMiner
 
-#### 2️⃣ Create and activate venv
-```bash
+2️⃣ Create and activate venv
 python -m venv .venv
 .\.venv\Scripts\activate     # Windows
 # or
 source .venv/bin/activate    # macOS/Linux
 
 #### 3️⃣ Install Dependencies
-```bash
 pip install -r requirements.txt
 
 #### 4️⃣ Set environment variables
-```bash
 Create a .env file in the root directory with:
-```env
 OPENAI_API_KEY=your_openai_api_key_here
 LLM_MODEL=gpt-4o-mini
 
 #### 5️⃣ Start the backend (FastAPI)
-```bash
 uvicorn app.main:app --host 127.0.0.1 --port 8080
 
 Test it:
-```bash
 curl -X POST http://127.0.0.1:8080/ask-llm -H "Content-Type: application/json" -d "{\"question\":\"Compare revenue by region in 2024\",\"start\":\"2024-01-01\",\"end\":\"2024-12-31\"}"
 
 #### 6️⃣ Start the frontend (Streamlit)
-```bash
 cd frontend
 streamlit run streamlit_app.py
 App will be available at:
