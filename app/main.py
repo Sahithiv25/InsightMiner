@@ -1,6 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routers import ask, health
+from app.routers import ask, ask_llm
+
+
 
 app = FastAPI(title="KPI Copilot API")
 app.add_middleware(
@@ -10,6 +13,7 @@ app.add_middleware(
 
 app.include_router(health.router)
 app.include_router(ask.router)
+app.include_router(ask_llm.router)
 
 @app.get("/")
 def root():
